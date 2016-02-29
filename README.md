@@ -1,1 +1,8 @@
 # Shiviti
+```
+Shiviti means Equanimity
+
+
+
+
+```
