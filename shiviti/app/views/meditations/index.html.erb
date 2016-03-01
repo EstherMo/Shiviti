@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meditations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Note</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Before mood</th>
+      <th>After mood</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meditations.each do |meditation| %>
+      <tr>
+      <% if meditation.user == current_user %>
+        <td><%= meditation.user_id %></td>
+        <td><%= meditation.note %></td>
+        <td><%= meditation.start_time %></td>
+        <td><%= meditation.end_time %></td>
+        <td><%= meditation.before_mood %></td>
+        <td><%= meditation.after_mood %></td>
+        <td><%= link_to 'Show', meditation %></td>
+        <td><%= link_to 'Edit', edit_meditation_path(meditation) %></td>
+        <td><%= link_to 'Destroy', meditation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% end %> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meditation', new_meditation_path %>

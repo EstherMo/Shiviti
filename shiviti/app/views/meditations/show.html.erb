@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @meditation.user_id %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @meditation.note %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @meditation.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @meditation.end_time %>
+</p>
+
+<p>
+  <strong>Before mood:</strong>
+  <%= @meditation.before_mood %>
+</p>
+
+<p>
+  <strong>After mood:</strong>
+  <%= @meditation.after_mood %>
+</p>
+
+<%= link_to 'Edit', edit_meditation_path(@meditation) %> |
+<%= link_to 'Back', meditations_path %>

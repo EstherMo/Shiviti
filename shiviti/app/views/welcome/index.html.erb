@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+
+	<%= link_to "Sign out", destroy_user_session_path, method: :delete %> <br>
+
+	<%= link_to "Meditate Now", new_meditation_path %> <br>
+
+
+<% else %>
+
+	<%= link_to "Sign up", new_user_registration_path %> <br>
+
+	<%= link_to "Log in", user_session_path %> <br>
+
+	<h1> Welcome to Shiviti </h1>
+
+<% end %>
+
+
+

@@ -1,0 +1,41 @@
+<%= form_for(@meditation) do |f| %>
+  <% if @meditation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meditation.errors.count, "error") %> prohibited this meditation from being saved:</h2>
+
+      <ul>
+      <% @meditation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div> -->
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.time_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :before_mood %><br>
+    <%= f.text_field :before_mood %>
+  </div>
+  <div class="field">
+    <%= f.label :after_mood %><br>
+    <%= f.text_field :after_mood %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
