@@ -5,12 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
- 
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 </head>
 <body>
 <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<p class="alert"><%= alert %></p> <br>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=ADDAPIKEY&libraries=places" async defer></script>
+
+<!-- &callback=initMap -->
 <%= yield %>
 
 </body>

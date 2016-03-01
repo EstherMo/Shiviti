@@ -4,6 +4,10 @@
 
 	<%= link_to "Meditate Now", new_meditation_path %> <br>
 
+	<button class="location">Find a place nearby to meditate</button> <br>
+	<div id="map"> </div>
+	<p id="error"></p>
+
 
 <% else %>
 
@@ -14,6 +18,8 @@
 	<h1> Welcome to Shiviti </h1>
 
 <% end %>
+
+
 
 
 
