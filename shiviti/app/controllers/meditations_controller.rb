@@ -26,6 +26,9 @@ class MeditationsController < ApplicationController
   # POST /meditations.json
   def create
     @meditation = current_user.meditations.build(meditation_params)
+    length_in_seconds = @meditation.end_time - @meditation.start_time
+    minutes = (length_in_seconds / 60) % 60
+    @meditation.length = minutes.floor
 
     respond_to do |format|
       if @meditation.save
@@ -36,7 +39,10 @@ class MeditationsController < ApplicationController
         format.json { render json: @meditation.errors, status: :unprocessable_entity }
       end
     end
+    # binding.pry
   end
+
+
 
   # PATCH/PUT /meditations/1
   # PATCH/PUT /meditations/1.json

@@ -16,8 +16,20 @@
 	<%= link_to "Log in", user_session_path %> <br>
 
 	<h1> Welcome to Shiviti </h1>
+	<style>
+body { 
+  background: url("http://i.imgur.com/Wl99B8Z.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
 
+<!-- https://media.giphy.com/media/bYzN4ZYhG2waA/giphy.gif -->
 <% end %>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%=@api_key%>&libraries=places" async defer></script>
 
 
 

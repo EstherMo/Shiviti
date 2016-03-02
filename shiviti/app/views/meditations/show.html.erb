@@ -1,16 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <strong>User:</strong>
   <%= @meditation.user_id %>
-</p>
+</p> -->
 
-<p>
-  <strong>Note:</strong>
-  <%= @meditation.note %>
-</p>
 
-<p>
+
+<!-- <p>
   <strong>Start time:</strong>
   <%= @meditation.start_time %>
 </p>
@@ -18,6 +15,9 @@
 <p>
   <strong>End time:</strong>
   <%= @meditation.end_time %>
+</p> -->
+
+<p> You meditated from <%= @meditation.start_time.strftime("%H:%M")%> to <%= @meditation.end_time.strftime("%H:%M")%> 😍 That is <%=@meditation.length %> minutes. 
 </p>
 
 <p>
@@ -30,5 +30,12 @@
   <%= @meditation.after_mood %>
 </p>
 
+<p>
+  <strong>Note:</strong>
+  <%= @meditation.note %>
+</p>
+<%= link_to 'Home', root_path %>
+<!-- 
 <%= link_to 'Edit', edit_meditation_path(@meditation) %> |
 <%= link_to 'Back', meditations_path %>
+ -->
