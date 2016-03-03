@@ -3,4 +3,7 @@ class WelcomeController < ApplicationController
 		@api_key = ENV["GOOGLE_API"]
 		# binding.pry
 	end
+
+	def progress
+	end
 end

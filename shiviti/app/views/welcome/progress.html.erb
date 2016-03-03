@@ -1,0 +1,30 @@
+<script>
+	
+$(document).ready(function(){
+	
+
+var ctx = $("#myChart").get(0).getContext("2d");
+				
+		var data = {
+	    labels: <%= current_user.meditations.map { |meditation| meditation.start_time.strftime('%B')}.to_json.html_safe%>,
+	    datasets: [
+	      {
+	          label: "My First dataset",
+	          fillColor: "rgba(220,220,220,0.2)",
+	          strokeColor: "rgba(220,220,220,1)",
+	          pointColor: "rgba(220,220,220,1)",
+	          pointStrokeColor: "#fff",
+	          pointHighlightFill: "#fff",
+	          pointHighlightStroke: "rgba(220,220,220,1)",
+	          data: <%=current_user.meditations.map(&:length)%>
+	        
+	      },
+	    ]
+		};
+		var myLineChart = new Chart(ctx).Line(data);
+});
+
+
+</script>
+<br>
+<%= link_to 'Home', root_path %>
