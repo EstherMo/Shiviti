@@ -1,36 +1,42 @@
+
 <% if user_signed_in? %>
 
 	<%= link_to "Sign out", destroy_user_session_path, method: :delete %> <br>
 
 	<%= link_to "Meditate Now", new_meditation_path %> <br>
-
 	<%= link_to "See my Progress", progress_path %> <br>
+
+	<%= link_to "Create a reminder", new_reminder_path %> <br>
+	
  
 	<button class="location">Find a place nearby to meditate</button> <br>
 	<div id="map"> </div>
 	<p id="error"></p>
 
-
-
-
 <% else %>
+	<h1 class="shiviti"> Shiviti </h1>
 
-	<%= link_to "Sign up", new_user_registration_path %> <br>
+	<div class="login">
+		<%= link_to "login/", user_session_path %> 
 
-	<%= link_to "Log in", user_session_path %> <br>
+		<%= link_to "new user", new_user_registration_path %> 
+	</div>
 
-	<h1> Welcome to Shiviti </h1>
+	
 	<style>
-body { 
-  background: url("http://i.imgur.com/Wl99B8Z.gif") no-repeat center center fixed; 
+/*body { 
+  background: url("http://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.mp4?v=1418162238190") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+}*/
 </style>
 
-<!-- https://media.giphy.com/media/bYzN4ZYhG2waA/giphy.gif -->
+<video autoplay loop>
+	<source src="http://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.mp4?v=1418162238190" type="video/mp4">
+</video>
+
 <% end %>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=<%=@api_key%>&libraries=places" async defer></script>

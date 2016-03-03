@@ -2,6 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//title
+
+.shiviti {
+	font-family: 'Satisfy', cursive;
+	color: white;
+	float: left;
+	font-size: 30pt;
+	margin: 0px;
+	margin-right: 20px;
+}
+
+
+//login
+
+.login a{
+	text-decoration: none;
+	color: white;
+	letter-spacing: 1px;
+	// font-size: 1em;
+ //  font-weight: 500;
+ //  line-height: 140%;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+  // margin-left: 20px;
+  // cursor: pointer;
+}
+
+.login a:hover{
+	text-decoration: none;
+	background-color: transparent;
+}
+
 //google map 
 html, body, #map {
 	height: 80%;
@@ -58,18 +91,30 @@ h1 {
 	float: right;
 }
 
+//background video
+
+// on other pages opacity: .9!important
 
 
 
 
+video { 
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+  background: url('http://7-themes.com/data_images/out/78/7040469-lake-mountains-woods.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
 
+.blur {
+	-webkit-filter: blur(20px);
+  opacity: .9;
+}
 
-//background image 
-
-//<a href="http://gifsoup.com/view/161705/relaxing-waters2.html" target="_blank"><img src="http://stream1.gifsoup.com/view/161705/relaxing-waters2-o.gif" border="0"/></a><br /><a href="http://gifsoup.com" title="GIFSoup" target="_blank">GIFSoup</a>
-
-
-
-//https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr04/22/7/anigif_enhanced-9624-1398165081-7.gif
-
-//https://static.pexels.com/photos/7976/pexels-photo.jpg

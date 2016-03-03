@@ -36,6 +36,15 @@ gem 'devise', '~> 3.5', '>= 3.5.6'
 #chart.js
 gem 'chart-js-rails'
 
+#twilio 
+gem 'twilio-ruby'
+
+# Use delayed job for running background jobs
+gem 'delayed_job_active_record'
+
+# Need daemons to start delayed_job
+gem 'daemons'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
