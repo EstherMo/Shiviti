@@ -1,6 +1,7 @@
 
 <% if user_signed_in? %>
 
+<div class="links">
 	<%= link_to "Sign out", destroy_user_session_path, method: :delete %> <br>
 
 	<%= link_to "Meditate Now", new_meditation_path %> <br>
@@ -8,7 +9,8 @@
 
 	<%= link_to "Create a reminder", new_reminder_path %> <br>
 	
- 
+ </div>
+
 	<button class="location">Find a place nearby to meditate</button> <br>
 	<div id="map"> </div>
 	<p id="error"></p>
@@ -22,7 +24,17 @@
 		<%= link_to "new user", new_user_registration_path %> 
 	</div>
 
-	
+	<script>
+		$(document).ready(function () {
+			$("#video").removeClass("blur");
+		});
+	</script>
+
+	<div class="welcome">
+		<p> Welcome to Shiviti </p>
+		<p> Relax with Shiviti, a simple mindfulness meditation <br> app that brings clarity and peace of mind into your life.</p>
+
+	</div>
 	<style>
 /*body { 
   background: url("http://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.mp4?v=1418162238190") no-repeat center center fixed; 
@@ -32,10 +44,6 @@
   background-size: cover;
 }*/
 </style>
-
-<video autoplay loop>
-	<source src="http://cdn.calm.com/scenes/scene-Qqkzy9k7Eo.mp4?v=1418162238190" type="video/mp4">
-</video>
 
 <% end %>
 

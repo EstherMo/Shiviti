@@ -15,17 +15,22 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div> -->
+<div class="center">
+
 
   <div class="start">
-  
-    <div class="field">
-      <%= f.label :start_time %><br>
-      <%= f.time_select :start_time, {:ampm => true} %>
-    </div>
-    <div class="field">
-      <%= f.label :before_mood %><br>
-      <%= f.text_field :before_mood %>
-    </div>
+    <div class ="midnight">
+    
+      <div class="field">
+        <%= f.label :start_time %><br>
+        <%= f.time_select :start_time, {:ampm => true} %>
+      </div>
+      <div class="field">
+        <%= f.label :before_mood %><br>
+        <%= f.text_field :before_mood %>
+      </div>
+      </div>
+
   </div>
 
 <div class="round-button"><button class="start_button start">Start</button> </div> <br>
@@ -54,3 +59,5 @@
 
 </div>
 <% end %>
+
+</div>

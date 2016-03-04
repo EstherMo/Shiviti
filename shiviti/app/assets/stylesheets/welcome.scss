@@ -35,12 +35,26 @@
 	background-color: transparent;
 }
 
+.links a{
+	text-decoration: none;
+	color: white;
+	letter-spacing: 1px;
+	font-family: 'Lato', sans-serif;
+
+}
+
+.links a:hover{
+	text-decoration: none;
+	background-color: transparent;
+}
+
 //google map 
 html, body, #map {
 	height: 80%;
 	width: 80%;
 	margin: 0px;
-	padding: 20px
+	padding: 20px;
+	color: white;
 }
 
 .location {
@@ -114,7 +128,76 @@ video {
 }
 
 .blur {
-	-webkit-filter: blur(20px);
-  opacity: .9;
+	-webkit-filter: blur(30px);
+  // opacity: .8;
 }
+
+//welcome blurb on homepage
+.welcome {
+	color: white;
+	position: fixed;
+	bottom: 40px;
+	font-size: 50pt;
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 1px;
+}
+
+
+
+//meditate page
+
+ .midnight {
+float: left;
+padding: 20px;
+margin: 20px;
+
+}
+
+.heading {
+	// float: left;
+	position: absolute;
+	top: 20%;
+	left: 38%;
+}
+
+label {
+    width:90px;
+    float:left;
+    font-size:12px;
+    line-height:24px;
+    font-weight:bold;
+
+}
+input {
+    width:300px;
+    margin-bottom:5px;
+    line-height:18px;
+    padding:2px 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #CCC;
+}
+
+
+
+.center {
+	position: absolute;
+	left: 35%;
+	top: 35%;
+	height: 50%;
+	width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

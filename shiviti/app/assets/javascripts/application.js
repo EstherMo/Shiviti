@@ -28,6 +28,7 @@ $('.location').on('click', function() {
 	function getLocation() {
 	    if (navigator.geolocation) {
 	        navigator.geolocation.getCurrentPosition(showPosition);
+	        debugger
 	    } else {
 	        x.innerHTML = "Geolocation is not supported by this browser.";
 	    }

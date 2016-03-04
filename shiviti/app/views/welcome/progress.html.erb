@@ -21,7 +21,8 @@ var ctx = $("#myChart").get(0).getContext("2d");
 	      },
 	    ]
 		};
-		var myLineChart = new Chart(ctx).Line(data);
+		var myLineChart = new Chart(ctx).Line(data, {
+     scaleFontColor: "#fff" });
 });
 
 
